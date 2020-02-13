@@ -7,7 +7,7 @@
     id="div_{{ field.auto_id }}"
     class="field{% if wrapper_class %} {{ wrapper_class }}{% endif %}"
   >
-  
+
   {% spaceless %}
     {% if field.label and not field|is_radioselect %}
       {% if field|is_checkbox %}
@@ -24,7 +24,7 @@
 
     <p class="control">
       {% if field|is_select %}
-        <div class="select">
+        <div class="select {% if field|is_selectmultiple %}is-multiple{% endif %}">
           {% crispy_field field %}
         </div>
       {% endif %}
